@@ -4175,9 +4175,38 @@ html {
   background-color: #BAC927;
 }
 
+img {
+  max-width: 100%;
+}
+
 .header_top {
   background-color: #2A5C8C;
   height: 45px;
+}
+
+.header_top.mobile {
+  height: 50px;
+}
+
+.header_top.mobile .phone {
+  padding: 0 15px;
+}
+
+.header_top.mobile .phone a {
+  padding-left: 28px;
+}
+
+.header_top.mobile .phone a:before {
+  width: 23px;
+  height: 23px;
+}
+
+.header_top.mobile .phone a .number {
+  font-size: 12px;
+}
+
+.header_top.mobile .row {
+  height: 100%;
 }
 
 .header_top > div {
@@ -4253,6 +4282,10 @@ html {
 .header_top .phone a .number {
   font-size: 15px;
   font-weight: 700;
+}
+
+.header_top .callcenter {
+  white-space: nowrap;
 }
 
 .header_top .callcenter a {
@@ -4344,13 +4377,57 @@ html {
   border: 1px solid #e5eaed;
   border-radius: 3px;
   outline: 0;
-  padding: 7px 20px;
+  padding: 8px 20px 9px 37px;
+  position: relative;
+  -webkit-transition: border-color .4s;
+  -o-transition: border-color .4s;
+  transition: border-color .4s;
+}
+
+.header_bottom .menu_btn:hover {
+  border-color: #BAC927;
+}
+
+.header_bottom .menu_btn:hover span {
+  color: #BAC927;
+}
+
+.header_bottom .menu_btn:hover svg line {
+  stroke: #BAC927;
 }
 
 .header_bottom .menu_btn span {
+  -webkit-transition: color .4s;
+  -o-transition: color .4s;
+  transition: color .4s;
   color: #302525;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.header_bottom .menu_btn svg line {
+  -webkit-transition: stroke .4s;
+  -o-transition: stroke .4s;
+  transition: stroke .4s;
+}
+
+.header_bottom .menu_btn .burger {
+  position: absolute;
+  top: 50%;
+  margin-top: -7px;
+  left: 22px;
+  opacity: 1;
+  -webkit-transition: opacity .4s;
+  -o-transition: opacity .4s;
+  transition: opacity .4s;
+}
+
+.header_bottom .menu_btn.open_menu .burger {
+  opacity: 0;
+}
+
+.header_bottom .menu_btn.open_menu .close {
+  opacity: 1;
 }
 
 .header_bottom .menu {
@@ -4400,12 +4477,6 @@ html {
 .main_slider .main_item {
   padding-top: 60px;
   position: relative;
-  max-width: 1110px;
-  margin: 0 auto;
-}
-
-.main_slider .main_item .content {
-  max-width: 603px;
 }
 
 .main_slider .main_item .content h1 {
@@ -4432,6 +4503,10 @@ html {
   position: absolute;
   right: 0;
   top: 78px;
+}
+
+.main_slider .main_item .car img {
+  margin-left: auto;
 }
 
 .main_slider .slick-arrow {
@@ -4495,6 +4570,10 @@ html {
   margin-right: 25px;
 }
 
+.main_slider .slick-dots li:focus {
+  outline: none;
+}
+
 .main_slider .slick-dots li button {
   color: transparent;
   background-color: #337AB7;
@@ -4510,4 +4589,87 @@ html {
 
 .main_slider .slick-dots li.slick-active button {
   opacity: 1;
+}
+
+@media screen and (max-width: 1300px) {
+  .main_slider .slick-arrow {
+    width: 35px;
+    height: 35px;
+  }
+  .main_slider .slick-arrow.slick-prev {
+    left: -12px;
+  }
+  .main_slider .slick-arrow.slick-next {
+    right: -12px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main_slider .main_item .content h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main_slider .slick-arrow {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header_bottom .menu {
+    display: none;
+  }
+  .header_bottom .menu_btn {
+    margin-left: auto;
+  }
+  .intro-section {
+    height: auto;
+  }
+  .intro-section > div {
+    height: auto;
+  }
+  .main_slider .main_item {
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+  .main_slider .main_item .content h1 {
+    max-width: 80%;
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  .main_slider .main_item .car {
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  .main_slider .main_item .content .condition_list .condition_item:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .header_bottom {
+    height: 85px;
+  }
+  .main_slider .main_item .content .btns_wrap {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main_slider .main_item .content .btns_wrap .order_btn {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .main_slider .main_item .car {
+    top: 45%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .main_slider .main_item .content h1 {
+    max-width: 100%;
+    font-size: 25px;
+  }
 }

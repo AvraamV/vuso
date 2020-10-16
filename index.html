@@ -14,16 +14,16 @@
 		<header>
 			<div class="header_top">
 				<div class="container d-flex align-items-center justify-content-end">
-					<div class="uppercase online dashed_border">
+					<div class="uppercase online dashed_border d-none d-sm-block">
 						<a href="#">Оплата онлайн</a>
 					</div>
-					<div class="phone dashed_border">
+					<div class="phone dashed_border d-none d-sm-block">
 						<a href="tel:0800503773">
 							<span class="number">0 800 50 3773</span>
 							<span>Безкоштовно</span>							
 						</a>
 					</div>
-					<div class="uppercase online callcenter">
+					<div class="uppercase online callcenter d-none d-sm-block">
 						<a href="#">
 							<svg id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m76 361h45v30h30v-210h-30v30h-30v-15c0-90.981 74.019-166 165-166s165 75.019 165 166v15h-30v-30h-30v210h30v-30h30v45c0 24.814-20.186 46-45 46h-77.763c-6.213-17.422-22.707-30-42.237-30-24.814 0-45 20.186-45 45s20.186 45 45 45c19.53 0 36.024-12.578 42.237-30h77.763c41.353 0 75-34.647 75-76v-47.763c17.422-6.213 30-22.707 30-42.237v-60c0-19.53-12.578-36.024-30-42.237v-17.763c0-107.52-87.48-196-195-196s-195 88.48-195 196v17.763c-17.422 6.213-30 22.707-30 42.237v60c0 24.814 20.186 45 45 45z"/></g></svg>
 							<span>Онлайн-чат</span>
@@ -45,6 +45,7 @@
 						<img src="img/logo-header.png" alt="logo">
 					</a>
 					<a href="#" class="menu_btn">
+						<svg class="burger" width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.530731" y1="1.77148" x2="9.85867" y2="1.77148" stroke="#302525" stroke-width="2"/><line x1="0.530731" y1="5.77148" x2="9.85867" y2="5.77148" stroke="#302525" stroke-width="2"/><line x1="0.530731" y1="9.77148" x2="9.85867" y2="9.77148" stroke="#302525" stroke-width="2"/></svg>
 						<span>Меню</span>
 					</a>
 					<ul class="menu">
@@ -60,113 +61,71 @@
 					</ul>	
 				</div>
 			</div>
+			<div class="header_top d-sm-none d-block mobile">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="phone dashed_border col-4">
+							<a href="tel:0800503773">
+								<span class="number">0 800 50 3773</span>
+								<span>Безкоштовно</span>							
+							</a>
+						</div>
+						<div class="col-4 uppercase online dashed_border">
+							<a href="">
+								<span></span>
+								<span>ЗВОРОТНИЙ ДЗВІНОК</span>
+							</a>							
+						</div>
+						<div class="uppercase online callcenter col-4">
+							<a href="#">
+								<svg id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m76 361h45v30h30v-210h-30v30h-30v-15c0-90.981 74.019-166 165-166s165 75.019 165 166v15h-30v-30h-30v210h30v-30h30v45c0 24.814-20.186 46-45 46h-77.763c-6.213-17.422-22.707-30-42.237-30-24.814 0-45 20.186-45 45s20.186 45 45 45c19.53 0 36.024-12.578 42.237-30h77.763c41.353 0 75-34.647 75-76v-47.763c17.422-6.213 30-22.707 30-42.237v-60c0-19.53-12.578-36.024-30-42.237v-17.763c0-107.52-87.48-196-195-196s-195 88.48-195 196v17.763c-17.422 6.213-30 22.707-30 42.237v60c0 24.814 20.186 45 45 45z"/></g></svg>
+								<span>Онлайн-чат</span>
+							</a>
+						</div>
+					</div>			
+				</div>				
+			</div>
 		</header>
 		<main>
 			<section class="intro-section">
 				<div class="container-fluid">
 					<div class="main_slider">
 						<div>
-							<div class="main_item">
-								<div class="content">
-									<h1>Миттєві виплати з КАСКО АНТИСТРЕС від VUSO</h1>
-									<div class="condition_list d-flex">
-										<div class="condition_item">
-											<div class="icon">
-												<img src="img/icon1.svg" alt="">
+							<div class="container">
+								<div class="main_item row">
+									<div class="content col-lg-7 col-12">
+										<h1>Миттєві виплати з КАСКО АНТИСТРЕС від VUSO</h1>
+										<div class="condition_list d-flex flex-lg-row flex-column">
+											<div class="condition_item">
+												<div class="icon">
+													<img src="img/icon1.svg" alt="">
+												</div>
+												<div class="text">Гарантія виплат<br>за 7 днів</div>
 											</div>
-											<div class="text">Гарантія виплат<br>за 7 днів</div>
+											<div class="condition_item">
+												<div class="icon">
+													<img src="img/icon2.svg" alt="">
+												</div>
+												<div class="text">Без довідок<br>з поліції</div>
+											</div>
+											<div class="condition_item">
+												<div class="icon">
+													<img src="img/icon3.svg" alt="">
+												</div>
+												<div class="text">Повний супровід<br>при страховому випадку</div>
+											</div>
 										</div>
-										<div class="condition_item">
-											<div class="icon">
-												<img src="img/icon2.svg" alt="">
-											</div>
-											<div class="text">Без довідок<br>з поліції</div>
-										</div>
-										<div class="condition_item">
-											<div class="icon">
-												<img src="img/icon3.svg" alt="">
-											</div>
-											<div class="text">Повний супровід<br>при страховому випадку</div>
+										<div class="btns_wrap d-flex justify-content-lg-start justify-content-center flex-sm-row flex-column">
+											<a href="#" class="order_btn btn_style">замовити</a>
+											<a href="#" class="calculate_btn btn_style">розрахувати моє КАСКО</a>
 										</div>
 									</div>
-									<div class="btns_wrap d-flex">
-										<a href="#" class="order_btn btn_style">замовити</a>
-										<a href="#" class="calculate_btn btn_style">розрахувати моє КАСКО</a>
+									<div class="car col-lg-7 col-sm-9 col-10">
+										<img src="img/car.png" alt="car">
 									</div>
-								</div>
-								<div class="car">
-									<img src="img/car.png" alt="car">
 								</div>
 							</div>
-						</div>
-						<div>
-							<div class="main_item">
-								<div class="content">
-									<h1>Миттєві виплати з КАСКО АНТИСТРЕС від VUSO</h1>
-									<div class="condition_list d-flex">
-										<div class="condition_item">
-											<div class="icon">
-												<img src="img/icon1.svg" alt="">
-											</div>
-											<div class="text">Гарантія виплат<br>за 7 днів</div>
-										</div>
-										<div class="condition_item">
-											<div class="icon">
-												<img src="img/icon2.svg" alt="">
-											</div>
-											<div class="text">Без довідок<br>з поліції</div>
-										</div>
-										<div class="condition_item">
-											<div class="icon">
-												<img src="img/icon3.svg" alt="">
-											</div>
-											<div class="text">Повний супровід<br>при страховому випадку</div>
-										</div>
-									</div>
-									<div class="btns_wrap d-flex">
-										<a href="#" class="order_btn btn_style">замовити</a>
-										<a href="#" class="calculate_btn btn_style">розрахувати моє КАСКО</a>
-									</div>
-								</div>
-								<div class="car">
-									<img src="img/car.png" alt="car">
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="main_item">
-								<div class="content">
-									<h1>Миттєві виплати з КАСКО АНТИСТРЕС від VUSO</h1>
-									<div class="condition_list d-flex">
-										<div class="condition_item">
-											<div class="icon">
-												<img src="img/icon1.svg" alt="">
-											</div>
-											<div class="text">Гарантія виплат<br>за 7 днів</div>
-										</div>
-										<div class="condition_item">
-											<div class="icon">
-												<img src="img/icon2.svg" alt="">
-											</div>
-											<div class="text">Без довідок<br>з поліції</div>
-										</div>
-										<div class="condition_item">
-											<div class="icon">
-												<img src="img/icon3.svg" alt="">
-											</div>
-											<div class="text">Повний супровід<br>при страховому випадку</div>
-										</div>
-									</div>
-									<div class="btns_wrap d-flex">
-										<a href="#" class="order_btn btn_style">замовити</a>
-										<a href="#" class="calculate_btn btn_style">розрахувати моє КАСКО</a>
-									</div>
-								</div>
-								<div class="car">
-									<img src="img/car.png" alt="car">
-								</div>
-							</div>
-						</div>				
+						</div>	
 					</div>
 				</div>				
 			</section>			
