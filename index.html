@@ -190,7 +190,7 @@
 										</div>
 										<div class="btns_wrap d-flex justify-content-lg-start justify-content-center flex-sm-row flex-column">
 											<a href="#" class="order_btn btn_style">замовити</a>
-											<a href="#" class="calculate_btn btn_style">розрахувати моє КАСКО</a>
+											<a href="calculate.html" class="calculate_btn btn_style">розрахувати моє КАСКО</a>
 										</div>
 									</div>
 									<div class="car col-lg-7 col-sm-9 col-10">
@@ -226,7 +226,7 @@
 										</div>
 										<div class="btns_wrap d-flex justify-content-lg-start justify-content-center flex-sm-row flex-column">
 											<a href="#" class="order_btn btn_style">замовити</a>
-											<a href="#" class="calculate_btn btn_style">розрахувати моє КАСКО</a>
+											<a href="calculate.html" class="calculate_btn btn_style">розрахувати моє КАСКО</a>
 										</div>
 									</div>
 									<div class="car col-lg-7 col-sm-9 col-10">
@@ -262,7 +262,7 @@
 										</div>
 										<div class="btns_wrap d-flex justify-content-lg-start justify-content-center flex-sm-row flex-column">
 											<a href="#" class="order_btn btn_style">замовити</a>
-											<a href="#" class="calculate_btn btn_style">розрахувати моє КАСКО</a>
+											<a href="calculate.html" class="calculate_btn btn_style">розрахувати моє КАСКО</a>
 										</div>
 									</div>
 									<div class="car col-lg-7 col-sm-9 col-10">
@@ -549,7 +549,7 @@
 					</div>
 					<div class="btns_wrap d-flex  justify-content-center flex-sm-row flex-column align-items-center">
 						<a href="#" class="order_btn btn_style">замовити</a>
-						<a href="#" class="calculate_btn btn_style">розрахувати моє КАСКО</a>
+						<a href="calculate.html" class="calculate_btn btn_style">розрахувати моє КАСКО</a>
 					</div>
 				</div>			
 			</section>
@@ -565,7 +565,8 @@
 								<div class="date_count">
 									<p>за 2020 рік</p>
 								</div>
-								<div class="d-flex numbers_block">
+								<div class="odometer"></div>
+								<!-- <div class="d-flex numbers_block">
 									<div class="d-flex boxes">
 										<div class="box"></div>
 										<div class="box odometer"><span>9</span></div>
@@ -582,7 +583,7 @@
 										<div class="box odometer"><span>3</span></div>
 									</div>
 									<div class="currency">грн</div>
-								</div>
+								</div> -->
 							</div>
 							<div class="d-flex align-items-center month_number flex-md-row flex-column">
 								<div class="date_count">
@@ -721,13 +722,19 @@
 									<div class="checkbox_wrap">
 										<input type="checkbox" id="check3">
 										<label for="check3">
-											<span class="info">Випадкові пошкодження</span>
+											<span class="info">Випадкові пошкодження<i></i></span>
+											<div class="info_show">
+												<p></p>												
+											</div>
 										</label>
 									</div>
 									<div class="checkbox_wrap">
 										<input type="checkbox" id="check4">
 										<label for="check4">
-											<span class="info">Моральна шкода</span>
+											<span class="info">Моральна шкода<i></i></span>
+											<div class="info_show">
+												<p></p>												
+											</div>
 										</label>
 									</div>
 									<div class="checkbox_wrap">
@@ -739,7 +746,10 @@
 									<div class="checkbox_wrap">
 										<input type="checkbox" id="check6">
 										<label for="check6">
-											<span class="info">Пошкодження колеса</span>
+											<span class="info">Пошкодження колеса<i></i></span>
+											<div class="info_show">
+												<p></p>												
+											</div>
 										</label>
 									</div>
 									<div class="checkbox_wrap">
@@ -751,7 +761,9 @@
 								</div>
 								<div class="col-md-7 col-12 result_block">
 									<h3>Вкажи вартісь автівки, грн</h3>
-									<div></div>
+									<div class="range_wrapper">
+										<input type="text" class="js-range-slider" name="my_range" value="" />
+									</div>
 									<div class="price_result">
 										<div>
 											<p>Вартість полісу ≈ <strong>12 000</strong> <span>грн / рік</span></p>
@@ -853,7 +865,7 @@
 										<p>* розрахунок для автомобіля марки Toyota, 2018 р.в., з реєстрацією в м. Київ</p>
 										<div class="btns_wrap d-flex justify-content-center flex-sm-row flex-column">
 											<a href="#" class="order_btn btn_style">замовити</a>
-											<a href="#" class="calculate_btn btn_style">розрахувати моє КАСКО</a>
+											<a href="calculate.html" class="calculate_btn btn_style">розрахувати моє КАСКО</a>
 										</div>
 									</div>
 								</div>
@@ -929,7 +941,7 @@
 								<p>* розрахунок для автомобіля марки Toyota, 2018 р.в., з реєстрацією в м. Київ</p>
 								<div class="btns_wrap d-flex justify-content-center flex-sm-row flex-column">
 									<a href="#" class="order_btn btn_style">замовити</a>
-									<a href="#" class="calculate_btn btn_style">розрахувати моє КАСКО</a>
+									<a href="calculate.html" class="calculate_btn btn_style">розрахувати моє КАСКО</a>
 								</div>
 							</div>
 						</div>						
@@ -1116,6 +1128,7 @@
 	</div>
 	<script src="js/libs/jquery-3.5.1.min.js"></script>
 	<script src="js/libs/odometer.min.js"></script>
+	<script src="js/libs/range.min.js"></script>
 	<script src="js/libs/slick.min.js"></script>
 	<script src="js/custom.js"></script>
 </body>

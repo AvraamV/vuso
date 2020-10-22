@@ -61,6 +61,19 @@ jQuery(document).ready(function ($) {
 		e.preventDefault();
 		$(this).toggleClass('open');
 		$('header .footer_list').toggleClass('open');
-	})
+	});
+
+	$(".js-range-slider").ionRangeSlider({
+      min: 100000,
+      max: 3000000
+  });
+
+  $('.odometer').html(97946453);
+
+  $('select').select2();
+
+  $(window).on('resize', function(){
+  	$('select').select2();
+  });
 	
 });
