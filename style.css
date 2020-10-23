@@ -5686,12 +5686,12 @@ html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, img, ul, ol, li, form,
   font-weight: 400;
   overflow: hidden;
   font-size: 14px;
-  font-family: 'Proxima Nova';
+  font-family: 'Proxima Nova', sans-serif;
   color: #2B2B6B;
 }
 
 .select2-container {
-  font-family: 'Proxima Nova';
+  font-family: "Proxima Nova", sans-serif !important;
 }
 
 .uppercase {
