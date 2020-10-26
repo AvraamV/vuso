@@ -84,14 +84,53 @@ jQuery(document).ready(function ($) {
 			$('header .footer_list').toggleClass('open');
 		});
 
+	//odometer settings
+	
+		function startOdometer(){
+			$('.odometer').fadeIn();
+			let scrollToBlock = $('.payment_section').offset().top - $(window).outerHeight();
 
+			if($(window).scrollTop() > scrollToBlock){
+				$('.odometer.year').html(97946453);
+				$('.odometer.month').html(13854628);
+				$('.odometer.week').html(4321749);			
+			}
+
+			let numbersCount1 = $('.odometer.year .odometer-digit').length;
+			let numbersCount2 = $('.odometer.month .odometer-digit').length;
+			let numbersCount3 = $('.odometer.week .odometer-digit').length;
+
+			if(numbersCount1 < 9){
+				$('.odometer.year').addClass('blue_blocks');
+			}else{
+				$('.odometer.year').removeClass('blue_blocks');			
+			}
+
+			if(numbersCount2 < 9){
+				$('.odometer.month').addClass('blue_blocks');
+			}else{
+				$('.odometer.month').removeClass('blue_blocks');			
+			}
+
+			if(numbersCount3 < 8){
+				$('.odometer.week').addClass('blue_blocks');
+			}else{
+				$('.odometer.week').removeClass('blue_blocks');			
+			}
+		}
+
+		if($('.odometer').length){
+			$(window).scroll(function(){
+				startOdometer()
+			});
+			startOdometer();
+		}
 
 	//init plugins
 		$('.js-range-slider').ionRangeSlider({
 	      min: 100000,
 	      max: 3000000
 	  });
-	  //$('.odometer').html(97946453);
 	  if($('select').length){
 		  $('select').select2({
 		  	minimumResultsForSearch: Infinity

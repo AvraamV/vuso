@@ -5686,8 +5686,12 @@ html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, img, ul, ol, li, form,
   font-weight: 400;
   overflow: hidden;
   font-size: 14px;
-  font-family: 'Proxima Nova';
+  font-family: 'Proxima Nova', sans-serif;
   color: #2B2B6B;
+}
+
+.select2-container {
+  font-family: "Proxima Nova", sans-serif !important;
 }
 
 .uppercase {
@@ -6662,17 +6666,6 @@ header .footer_list:before {
   text-transform: uppercase;
 }
 
-.payment_section .odometer {
-  -webkit-transform: translate(150%, 0) scale(4);
-      -ms-transform: translate(150%, 0) scale(4);
-          transform: translate(150%, 0) scale(4);
-  margin-right: auto;
-}
-
-.payment_section .odometer-formatting-mark {
-  color: transparent;
-}
-
 .payment_section .currency {
   color: #F3B01A;
   font-size: 26px;
@@ -7581,6 +7574,114 @@ footer .footer_bottom .developers {
   margin-bottom: 20px;
 }
 
+.payment_section .date_count {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.payment_section .currency {
+  margin-left: 0;
+}
+
+.odometer.odometer-auto-theme {
+  width: 100%;
+  margin-right: 14px;
+}
+
+.odometer-inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 48px;
+}
+
+.odometer-inside .odometer-value {
+  color: #fff !important;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+.odometer.year.odometer-animating-up .odometer-ribbon-inner, .odometer.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
+  -webkit-transition-duration: 5s !important;
+       -o-transition-duration: 5s !important;
+          transition-duration: 5s !important;
+}
+
+.odometer.month.odometer-animating-up .odometer-ribbon-inner, .odometer.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
+  -webkit-transition-duration: 4s !important;
+       -o-transition-duration: 4s !important;
+          transition-duration: 4s !important;
+}
+
+.odometer.week.odometer-animating-up .odometer-ribbon-inner, .odometer.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
+  -webkit-transition-duration: 3s !important;
+       -o-transition-duration: 3s !important;
+          transition-duration: 3s !important;
+}
+
+.odometer {
+  display: none;
+}
+
+.odometer.month .odometer-inside .odometer-value, .odometer.week .odometer-inside .odometer-value {
+  color: #F3B01A !important;
+}
+
+.odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-train-station .odometer-digit {
+  width: 43px;
+  margin-right: 3px;
+  background-color: transparent;
+  background-image: url("../img/number_bg.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.odometer.odometer-auto-theme .odometer-digit:nth-last-of-type(3), .odometer.odometer-auto-theme .odometer-digit:nth-last-of-type(7), .odometer.odometer-theme-train-station .odometer-digit:nth-last-of-type(3), .odometer.odometer-theme-train-station .odometer-digit:nth-last-of-type(7) {
+  margin-left: 14px;
+}
+
+.odometer.odometer-auto-theme .odometer-digit:last-of-type, .odometer.odometer-theme-train-station .odometer-digit:last-of-type {
+  margin-right: 0;
+}
+
+.odometer.odometer-auto-theme .odometer-digit + .odometer-digit, .odometer.odometer-theme-train-station .odometer-digit + .odometer-digit {
+  margin-left: 0;
+}
+
+.odometer-formatting-mark {
+  display: none;
+}
+
+.blue_blocks {
+  position: relative;
+}
+
+.blue_blocks:before {
+  position: absolute;
+  content: "";
+  width: 43px;
+  height: 60.27px;
+  background-image: url("../img/number_bg.svg");
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  left: -12px;
+}
+
+.blue_blocks.week:after {
+  position: absolute;
+  content: "";
+  width: 43px;
+  height: 60.27px;
+  background-image: url("../img/number_bg.svg");
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  left: 34px;
+}
+
 .breadcrumbs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7944,6 +8045,15 @@ footer.subpage .container:before {
   .benefits_section .mobile .benefit_item {
     height: 193px;
   }
+  .odometer.odometer-auto-theme .odometer-digit:nth-last-of-type(3), .odometer.odometer-auto-theme .odometer-digit:nth-last-of-type(7), .odometer.odometer-theme-train-station .odometer-digit:nth-last-of-type(3), .odometer.odometer-theme-train-station .odometer-digit:nth-last-of-type(7) {
+    margin-left: 8px;
+  }
+  .blue_blocks:before {
+    left: -19px;
+  }
+  .blue_blocks.week:after {
+    left: 27px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -8038,6 +8148,9 @@ footer.subpage .container:before {
   .package_section.step_two .btn_style {
     display: block;
     margin: 0 auto;
+  }
+  .odometer.odometer-auto-theme {
+    max-width: 408px;
   }
 }
 
@@ -8165,6 +8278,19 @@ footer.subpage .container:before {
   }
   .package_section.step_two .section_title {
     margin-bottom: 40px;
+  }
+  .odometer.odometer-auto-theme {
+    margin-right: auto;
+    margin-left: 19px;
+  }
+  .payment_section .currency {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .numbers_wrap > div {
+    position: relative;
+    padding-right: 70px;
   }
 }
 
@@ -8430,6 +8556,45 @@ footer.subpage .container:before {
   .calculate_step_one {
     padding-top: 30px;
   }
+  .back_to_top {
+    right: 15px;
+    bottom: 30px;
+  }
+  .odometer-inside {
+    font-size: 31px;
+  }
+  .odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-train-station .odometer-digit {
+    width: 28px;
+    height: 40px;
+  }
+  .blue_blocks:before {
+    width: 28px;
+    height: 40px;
+    top: 0;
+    left: -12px;
+  }
+  .blue_blocks.week:after {
+    width: 28px;
+    height: 40px;
+    top: 0;
+    left: 34px;
+  }
+  .odometer.odometer-auto-theme {
+    max-width: 281px;
+    margin-left: 13px;
+  }
+  .payment_section .currency {
+    font-size: 16px;
+    right: auto;
+    left: 300px;
+  }
+  .blue_blocks.week:after {
+    left: 20px;
+  }
+  .numbers_wrap > div {
+    max-width: 320px;
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -8445,9 +8610,6 @@ footer.subpage .container:before {
     width: 28px;
     font-size: 31px;
     line-height: 40px;
-  }
-  .numbers_wrap > div {
-    max-width: 320px;
   }
   .payment_section .currency {
     font-size: 16px;
