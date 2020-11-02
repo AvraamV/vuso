@@ -91,9 +91,9 @@ jQuery(document).ready(function ($) {
 			let scrollToBlock = $('.payment_section').offset().top - $(window).outerHeight();
 
 			if($(window).scrollTop() > scrollToBlock){
-				$('.odometer.year').html(120);
-				$('.odometer.month').html(150);
-				$('.odometer.week').html(150);			
+				$('.odometer.year').html(94712345);
+				$('.odometer.month').html(1345658);
+				$('.odometer.week').html(4569874);			
 			}
 
 			let numbersCount1 = $('.odometer.year .odometer-digit').length;
