@@ -100,19 +100,19 @@ jQuery(document).ready(function ($) {
 			let numbersCount2 = $('.odometer.month .odometer-digit').length;
 			let numbersCount3 = $('.odometer.week .odometer-digit').length;
 
-			if(numbersCount1 < 9){
+			if(numbersCount1 == 9){
 				$('.odometer.year').addClass('blue_blocks');
 			}else{
 				$('.odometer.year').removeClass('blue_blocks');			
 			}
 
-			if(numbersCount2 < 9){
+			if(numbersCount2 == 9){
 				$('.odometer.month').addClass('blue_blocks');
 			}else{
 				$('.odometer.month').removeClass('blue_blocks');			
 			}
 
-			if(numbersCount3 < 8){
+			if(numbersCount3 == 8){
 				$('.odometer.week').addClass('blue_blocks');
 			}else{
 				$('.odometer.week').removeClass('blue_blocks');			
